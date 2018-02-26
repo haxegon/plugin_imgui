@@ -40,53 +40,56 @@ Here is another, more complex example:
 import haxegon.*;
 
 class Main{
-	function init(){
-		Gui.setfont("default", 3);
-	}
-	
-  function update(){
-		Gfx.clearscreen(Gui.style.shadow);
-		
-    Gui.window("Example window", Gfx.screenwidthmid, Text.CENTER);
-			switch(Gui.menubar(["File", "Edit", "View"])){
-				case "File":
-					switch(Gui.menulist(["New", "Modify", "Open", "Save", "Save as...", "Close"])){
-						case "New":  				trace("New");
-						case "Modify":			trace("Modity");
-						case "Open":				trace("Open");
-						case "Save":				trace("Save");
-						case "Save as...":  trace("Save as...");
-						case "Close":			  trace("Close");
-					}
-				case "Edit":
-					switch(Gui.menulist(["Undo", "Redo", "", "Cut", "Copy", "Paste", "Select All"])){
-					case "Undo":				  trace("Undo");
-					case "Redo":  			  trace("Redo");
-					case "Cut": 				  trace("Cut");
-					case "Copy":				  trace("Copy");
-					case "Paste":  		    trace("Paste");
-					case "Select All":    trace("Select All");
-				}
-			case "View":
-				switch(Gui.menulist(["Full Screen", "Split View"])){
-					case "Full Screen":	  trace("Full Screen");
-					case "Split View":    trace("Split View");
-				}
-			}
-			Gui.button("button");
-			
-			radioselected = Gui.radio("radio", radioselected);
-			
-			sliderval = Gui.slider(160, 0, 100, sliderval);
-			
-			inputbox = Gui.input(inputbox);
-			
-		Gui.end();
+  function init(){
+    Gui.setfont("default", 3);
   }
 	
-	var radioselected:Bool = false;
-	var sliderval:Float = 50;
-	var inputbox:String = "type stuff here";
+  function update(){
+    Gfx.clearscreen(Gui.style.shadow);
+    
+    Gui.window("Example window", Gfx.screenwidthmid, Text.CENTER);
+    
+    switch(Gui.menubar(["File", "Edit", "View"])){
+      case "File":
+        switch(Gui.menulist(["New", "Modify", "Open", "Save", "Save as...", "Close"])){
+          case "New":  		trace("New");
+          case "Modify":	trace("Modity");
+          case "Open":		trace("Open");
+          case "Save":		trace("Save");
+          case "Save as...":  	trace("Save as...");
+          case "Close":		trace("Close");
+      }
+      case "Edit":
+        switch(Gui.menulist(["Undo", "Redo", "", "Cut", "Copy", "Paste", "Select All"])){
+          case "Undo": 		trace("Undo");
+          case "Redo":  	trace("Redo");
+          case "Cut": 		trace("Cut");
+          case "Copy":		trace("Copy");
+          case "Paste": 	trace("Paste");
+          case "Select All":    trace("Select All");
+      }
+      case "View":
+        switch(Gui.menulist(["Full Screen", "Split View"])){
+          case "Full Screen":	  trace("Full Screen");
+          case "Split View":    trace("Split View");
+        }
+      }
+    }
+	
+    Gui.button("button");
+      
+    radioselected = Gui.radio("radio", radioselected);		
+      
+    sliderval = Gui.slider(160, 0, 100, sliderval);
+        
+    inputbox = Gui.input(inputbox);
+        
+    Gui.end();
+  }	
+
+  var radioselected:Bool = false;
+  var sliderval:Float = 50;
+  var inputbox:String = "type stuff here";
 }
 ```
 
