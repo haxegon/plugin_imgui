@@ -58,7 +58,7 @@ class Main{
           case "Close":		trace("Close");
       }
       case "Edit":
-        switch(Gui.menulist(["Undo", "", Copy", "Paste"])){
+        switch(Gui.menulist(["Undo", "", "Copy", "Paste"])){
           case "Undo": 		trace("Undo");
           case "Copy":		trace("Copy");
           case "Paste": 	trace("Paste");
