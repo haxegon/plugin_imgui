@@ -88,7 +88,7 @@ See <a href="https://github.com/haxegon/plugin_imgui/tree/master/examples">the e
 
 Not available yet. Check back later!
 
-## About Filters
+## About imGui
 
 *version*: 0.1.0
 
@@ -100,7 +100,7 @@ Not available yet. Check back later!
 
 ## About Haxegon
 
-**Filters** is a plugin for Haxegon. For more plugins, see http://www.haxegon.com/plugins/
+**imGui** is a plugin for Haxegon. For more plugins, see http://www.haxegon.com/plugins/
 
   
   
