@@ -1,7 +1,7 @@
 # imGui (version 0.1.0 (2018-02-26))
 ## A plugin for Haxegon: http://www.haxegon.com
 
-**imGui** is a simple immediate mode style gui plugin for Haxegon. **imGui** allows you to write dead easy GUI code that looks like this:
+**imGui** is a simple immediate mode style gui plugin for Haxegon. **imGui** allows you to write simple GUI code that looks like this:
 
 ``` haxe
 import haxegon.*;
@@ -15,7 +15,7 @@ class Main {
 }
 ```
 
-For more information about the idea behind imgui systems and why they're great, check out:
+For more information about the idea behind imgui systems, check out:
   - <a href="https://mollyrocket.com/861">Casey Muratori's introduction video</a>
   - <a href="https://github.com/ocornut/imgui">Ocornut's Dear ImGui, a major inspiration for this plugin</a>
   - <a href="http://sol.gfxile.net/imgui/">Sol on Immediate Mode GUIs (IMGUI)</a>
