@@ -34,51 +34,22 @@ To install the **imGui** plugin, <a href="https://raw.githubusercontent.com/haxe
 
 ## Usage
 
-Here is another, more complex example:
+Here is a simple example:
 
 ``` haxe
 import haxegon.*;
 
-class Main{
-  function init(){
-    Gui.setfont("default", 3);
-  }
-	
+class Main {
   function update(){
-    Gfx.clearscreen(Gui.style.shadow);
-    
-    Gui.window("Example window");
-    
-    switch(Gui.menubar(["File", "Edit"])){
-      case "File":
-        switch(Gui.menulist(["New", "Open", "Save", "Close"])){
-          case "New":  		trace("New");
-          case "Open":		trace("Open");
-          case "Save":		trace("Save");
-          case "Close":		trace("Close");
-      }
-      case "Edit":
-        switch(Gui.menulist(["Undo", "", "Copy", "Paste"])){
-          case "Undo": 		trace("Undo");
-          case "Copy":		trace("Copy");
-          case "Paste": 	trace("Paste");
-      }
+    if(Gui.button("click me")){
+      trace("You clicked the button!");
     }
-	
-    Gui.button("button");
     
-    radioselected = Gui.radio("radio", radioselected);		
-    
-    sliderval = Gui.slider(160, 0, 100, sliderval);
-      
+    radioactive = Gui.radio("toggle me", radioactive);
     inputbox = Gui.input(inputbox);
-      
-    Gui.end();
-  }	
-
-  var radioselected:Bool = false;
-  var sliderval:Float = 50;
-  var inputbox:String = "type stuff here";
+  }
+  var radioactive:Bool = false;
+  var inputbox:String = "type something here";
 }
 ```
 
