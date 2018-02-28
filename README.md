@@ -86,7 +86,7 @@ See <a href="https://github.com/haxegon/plugin_imgui/tree/master/examples">the e
 
 ## Documentation
 
-Not available yet. Check back later!
+Not available yet. Check back later! For now, refer to <a href="https://github.com/haxegon/plugin_imgui/tree/master/examples">the examples</a>. 
 
 ## About imGui
 
