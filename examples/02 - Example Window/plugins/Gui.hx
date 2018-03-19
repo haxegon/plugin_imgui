@@ -152,11 +152,11 @@ private class Rendercommandclass{
 						Gfx.drawstate = Gfx.DRAWSTATE_IMAGE;
 						
 						Gfx.shapematrix.identity();
-						Gfx.shapematrix.translate(x - 2, y - 2);
+						Gfx.shapematrix.translate(Std.int(x - 2), Std.int(y - 2));
 						if (align == Text.CENTER){
-							Gfx.shapematrix.translate(-Gui.tempprintcache.halfwidth, 0);
+							Gfx.shapematrix.translate(-Std.int(Gui.tempprintcache.halfwidth), 0);
 						}else if (align == Text.RIGHT){
-							Gfx.shapematrix.translate(-Gui.tempprintcache.width, 0);
+							Gfx.shapematrix.translate(-Std.int(Gui.tempprintcache.width), 0);
 						}
 						Gfx.meshbatch.addMesh(Gui.tempprintcache.imagecache, Gfx.shapematrix, 1.0);
 						Gfx.endmeshbatch();
