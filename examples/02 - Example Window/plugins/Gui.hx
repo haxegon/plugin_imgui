@@ -1113,8 +1113,13 @@ class Gui{
 	}
 	
 	public static function moveto(_x:Float, _y:Float){
-		windowlist[currentwindow].x = windowlist[currentwindow].windowmemory.boundaryx + _x;
-		windowlist[currentwindow].y = windowlist[currentwindow].windowmemory.boundaryy + _y;
+		if(windowlist[currentwindow].type == 1){
+			windowlist[currentwindow].x = windowlist[currentwindow].windowmemory.boundaryx + _x;
+			windowlist[currentwindow].y = windowlist[currentwindow].windowmemory.boundaryy + _y;
+		}else{
+			windowlist[currentwindow].x = _x;
+			windowlist[currentwindow].y = _y;
+		}
 	}
 	
 	public static function align(newalignment:Int){
