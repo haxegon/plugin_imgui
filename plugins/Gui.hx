@@ -147,10 +147,6 @@ private class Rendercommandclass{
 					
 					Gui.tempprintcache = Gui.guiprintcache.get(text);
 					if (Gui.tempprintcache != null){
-						Gfx.endmeshbatch();
-						Gfx.updatemeshbatch();
-						Gfx.drawstate = Gfx.DRAWSTATE_IMAGE;
-						
 						Gfx.shapematrix.identity();
 						Gfx.shapematrix.translate(Std.int(x - 2), Std.int(y - 2));
 						if (align == Text.CENTER){
@@ -158,8 +154,8 @@ private class Rendercommandclass{
 						}else if (align == Text.RIGHT){
 							Gfx.shapematrix.translate(-Std.int(Gui.tempprintcache.width), 0);
 						}
-						Gfx.meshbatch.addMesh(Gui.tempprintcache.imagecache, Gfx.shapematrix, 1.0);
-						Gfx.endmeshbatch();
+						
+						Gfx.addmeshtobatch(Gui.tempprintcache.imagecache, Gfx.shapematrix);
 					}
 				case 3: //volatile print - for text that changes frequently
 					//TO DO
